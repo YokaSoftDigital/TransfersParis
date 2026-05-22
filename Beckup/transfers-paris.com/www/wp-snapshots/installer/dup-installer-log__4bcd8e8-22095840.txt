@@ -1,0 +1,518 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 10:39:41
+* VERSION: 1.3.28
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.2.29                                |7.2.29
+OS__________________: Linux                                 |Linux
+CREATED_____________: 2020-04-22 09:58:40
+WP VERSION__________: 5.2.5
+DUP VERSION_________: 1.3.28
+DB__________________: 5.7.16
+DB TABLES___________: 31
+DB ROWS_____________: 14,478
+DB FILE SIZE________: 7MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 7.2.29 | SAPI: litespeed
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache
+DOC ROOT____________: "/home/tranpari/transfers-paris.com/www"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://www.transfers-paris.com/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ENGINE______: "shellexec_unzip"
+SET DIR PERMS_______: 1
+DIR PERMS VALUE_____: 1363
+SET FILE PERMS______: 1
+FILE PERMS VALUE____: 1204
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "transfer_4bcd8e84003c346b9422_20200422095840_archive.zip"
+SIZE________________: 50.48MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+
+
+START ZIP FILE EXTRACTION SHELLEXEC >>> 
+>>> Starting Shell-Exec Unzip:
+Command: unzip -o -qq '/home/tranpari/transfers-paris.com/www/transfer_4bcd8e84003c346b9422_20200422095840_archive.zip' -d '/home/tranpari/transfers-paris.com/www' 2>&1
+<<< Shell-Exec Unzip Complete.
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+PERMISSION UPDATES:
+    -DIRS:  '755'
+    -FILES: '644'
+
+STEP-1 COMPLETE @ 10:39:57 - RUNTIME: 16.0473 sec.
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/2002): No such file or directory [CODE:2|FILE:/home/tranpari/transfers-paris.com/www/dup-installer/classes/class.db.php|LINE:43]
+DATABASE CONNECTION ERROR: No such file or directory[ERRNO:2002]
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 10:40:47
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: false
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: false
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.7.16 -- Build Server: 5.7.16
+FILE SIZE:	dup-database__4bcd8e8-22095840.sql (3.41MB)
+TIMEOUT:	5000
+MAXPACK:	16777216
+SQLMODE:	NO_DIR_IN_CREATE
+NEW SQL FILE:	[/home/tranpari/transfers-paris.com/www/dup-installer/dup-installer-data__4bcd8e8-22095840.sql]
+COLLATE FB:	Off
+[PHP ERR][WARN] MSG:count(): Parameter must be an array or an object that implements Countable [CODE:2|FILE:/home/tranpari/transfers-paris.com/www/dup-installer/ctrls/ctrl.s2.dbinstall.php|LINE:386]
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	276
+
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (0)
+wp_icl_content_status: (0)
+wp_icl_core_status: (0)
+wp_icl_flags: (64)
+wp_icl_languages: (64)
+wp_icl_languages_translations: (4096)
+wp_icl_locale_map: (8)
+wp_icl_message_status: (0)
+wp_icl_node: (0)
+wp_icl_reminders: (0)
+wp_icl_string_positions: (0)
+wp_icl_string_status: (0)
+wp_icl_string_translations: (0)
+wp_icl_strings: (0)
+wp_icl_translate: (0)
+wp_icl_translate_job: (0)
+wp_icl_translation_batches: (0)
+wp_icl_translation_status: (196)
+wp_icl_translations: (414)
+wp_links: (0)
+wp_options: (2148)
+wp_postmeta: (6591)
+wp_posts: (1419)
+wp_term_relationships: (25)
+wp_term_taxonomy: (16)
+wp_termmeta: (0)
+wp_terms: (16)
+wp_usermeta: (30)
+wp_users: (1)
+Removed '26' cache/transient rows
+
+INSERT DATA RUNTIME: 0.5616 sec.
+STEP-2 COMPLETE @ 10:40:48 - RUNTIME: 0.5720 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 10:40:57
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "Transfer Paris"
+postguid______________: false
+fullsearch____________: false
+path_old______________: "/home/mymed/dstudio.pro/transfer"
+path_new______________: "/home/tranpari/transfers-paris.com/www"
+siteurl_______________: "http://www.transfers-paris.com"
+url_old_______________: "http://transfer.dstudio.pro"
+url_new_______________: "http://www.transfers-paris.com"
+maxSerializeStrlen____: 4000000
+replaceMail___________: false
+dbhost________________: "tranpari.mysql.tools"
+dbuser________________: "tranpari_transfer"
+dbname________________: "tranpari_transfer"
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_username___________: ""
+wp_mail_______________: ""
+wp_nickname___________: ""
+wp_first_name_________: ""
+wp_last_name__________: ""
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_content_status"___________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_core_status"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_flags"____________________________________[ROWS:    64][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_icl_languages"________________________________[ROWS:    64][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_icl_languages_translations"___________________[ROWS:  4096][PG:   2][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_icl_locale_map"_______________________________[ROWS:     8][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_icl_message_status"___________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_node"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_reminders"________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_string_positions"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_string_status"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_string_translations"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_strings"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_translate"________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_translate_job"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_translation_batches"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_icl_translation_status"_______________________[ROWS:   196][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_icl_translations"_____________________________[ROWS:   414][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:  2148][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS:  6591][PG:   2][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:  1419][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:    25][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:    16][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:    16][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:    30][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     1][PG:   1][SCAN:text columns]
+	SEARCH  1:"/home/mymed/dstudio.pro/transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  2:"\/home\/mymed\/dstudio.pro\/transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  3:"%2Fhome%2Fmymed%2Fdstudio.pro%2Ftransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  4:"\home\mymed\dstudio.pro\transfer" ================> "/home/tranpari/transfers-paris.com/www"
+	SEARCH  5:"\\home\\mymed\\dstudio.pro\\transfer" ============> "\/home\/tranpari\/transfers-paris.com\/www"
+	SEARCH  6:"%5Chome%5Cmymed%5Cdstudio.pro%5Ctransfer" ========> "%2Fhome%2Ftranpari%2Ftransfers-paris.com%2Fwww"
+	SEARCH  7:"//transfer.dstudio.pro" ==========================> "//www.transfers-paris.com"
+	SEARCH  8:"\/\/transfer.dstudio.pro" ========================> "\/\/www.transfers-paris.com"
+	SEARCH  9:"%2F%2Ftransfer.dstudio.pro" ======================> "%2F%2Fwww.transfers-paris.com"
+	SEARCH 10:"https://www.transfers-paris.com" =================> "http://www.transfers-paris.com"
+	SEARCH 11:"https:\/\/www.transfers-paris.com" ===============> "http:\/\/www.transfers-paris.com"
+	SEARCH 12:"https%3A%2F%2Fwww.transfers-paris.com" ===========> "http%3A%2F%2Fwww.transfers-paris.com"
+--------------------------------------
+SCANNED:	Tables:31 	|	 Rows:15089 	|	 Cells:90761 
+UPDATED:	Tables:2 	|	 Rows:1424 	|	 Cells:1426 
+ERRORS:		0 
+RUNTIME:	0.468700 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	REMOVED WP_ALLOW_MULTISITE
+	UPDATE DB_NAME ""tranpari_transfer""
+	UPDATE DB_USER ""tranpari_transfer""
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""tranpari.mysql.tools""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache '.htaccess__4bcd8e8-22095840' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Deactivated plugins list here: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 10:40:58 - RUNTIME: 0.5005 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] No general notices
+	SECTIONS: general
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+====================================

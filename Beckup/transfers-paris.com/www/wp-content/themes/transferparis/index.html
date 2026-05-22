@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Transfer</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#08b7ff">
+	<!-- Custom Browsers Color End -->
+	
+	<style>
+		.commoon-opacity-wrapper{opacity: 0;}
+		.loader{position:fixed;left:0;right:0;top:0;bottom:0;z-index:999;display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center}.loader.active .loader-inner span{transform:translateY(0);opacity:1}.loader-inner{position:relative;z-index:3;padding:60px;font-size:100px;color:#fff;font-weight:900;text-transform:uppercase}.loader-inner span{transform:translateY(100%);transition:all .4s ease;display:inline-block;opacity:0}.loader-bg{position:absolute;border-radius:50%;transition:transform .8s ease;background:linear-gradient(to right,#08b7ff,#1c32aa);z-index:2;transform:scale(0)}
+
+		@media screen and (max-width: 768px){.loader-inner{padding: 30px;font-size: 40px;}}
+	</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@3.0.0-beta.4/dist/simplebar.min.css">
+	<link rel="stylesheet" href="libs/dp/jquery.datetimepicker.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- loader -->
+	<div class="loader" id="loader">
+		<div class="loader-bg" id="loader-bg"></div>
+		<div class="loader-inner" id="loader-inner">
+			Loading...
+		</div>
+	</div>
+	<!-- end loader -->
+
+	<div class="commoon-opacity-wrapper" id="commoon-opacity-wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="wrapper">
+				<div class="header-menu">
+					<a href="/" class="header-logo">
+						<img src="img/logo.png" alt="Logotype">
+					</a>
+					<nav>
+						<ul>
+							<li><a href="#section3">Benefits</a></li>
+							<li><a href="#section5">Excursions</a></li>
+							<li><a href="#section7">For Drivers</a></li>
+						</ul>
+					</nav>
+					<a href="#" class="header-call" id="header-call">
+						Call Me
+					</a>
+				</div>
+				<div class="header-leng">
+					<ul>
+						<li>
+							<a href="tel:(044) 465 4456">
+								(044) 465 4456
+							</a>
+						</li>
+						<li>
+							<a href="tel:(044) 465 4456">
+								(044) 465 4456
+							</a>
+						</li>
+					</ul>
+					<div class="leng-button">
+						EN
+					</div>
+					<button id="open-mobile-menu" class="header-mob-menu">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+
+		<!-- gradient-wrapper -->
+		<div class="gradient-wrapper">
+
+			<!-- window1 -->
+			<section class="window1" id="window1">
+				<img src="img/paris.svg" alt="Image" class="window1-paris-icon">
+				<div class="wrapper">
+					<div class="window1-calculate">
+						<div class="window1-title">
+							<h1 id="window1-title-anchor">
+								Transfer <br>Paris
+							</h1>
+							<div class="window1-trigger">
+								<div class="window1-trigger-item">
+									<p>
+										Order the route in both directions
+									</p>
+								</div>
+								<div class="window1-trigger-item">
+									<a href="#window1-trigger-item-action-anchor" class="window1-trigger-item-action pass-off" id="window1-trigger-item-action"></a>
+								</div>
+							</div>
+						</div>
+						<form action="#">
+							<!-- form -->
+							<input type="hidden" name="Client Name" id="window1-hidden-name">
+							<input type="hidden" name="Client Phone" id="window1-hidden-phone">
+							<div class="window1-form-box-1 window1-form-box window1-form-box-right">
+								<div class="window1-input ">
+									<div class="window1-select-bg">
+										<input type="text" placeholder="Form/To : Address" required id="form-from" readonly class="pass-off">
+
+										<div class="window1-hidden-select" id="window1-hidden-select">
+											<ul data-simplebar data-simplebar-auto-hide="false" id="car-class-val-common"></ul>
+										</div>
+										<div class="input-hidden-select-error" id="input-hidden-select-error">On request</div>
+									</div>
+								</div>
+								<div class="window1-input">
+									<input type="text" placeholder="Date / Time" required readonly id="calendar-input" class="window1-calendar-input pass-off" name="filter-date">
+								</div>
+							</div>
+
+							<div class="window1-form-box-2 window1-form-box window1-form-box-right" id="window1-trigger-item-action-anchor">
+								<div class="window1-input">
+									<input type="text" placeholder="Details" required id="to-from" autocomplete="off" readonly class="pass-off"> 
+								</div>
+								<div class="window1-input window1-input-select">
+									<input type="text" id="choose-car-class" name="Car class" placeholder="Car class" readonly>
+									<img src="img/down.svg" alt="Arrow">
+								</div>
+							</div>
+
+							<div class="window1-form-box window1-form-box-left window1-form-box-3">
+								<div class="window1-input">
+									<input type="number" placeholder="Passenger" required min="1" max="40" id="form-passenger" class="pass-off" data-address="0">
+								</div>
+								<div class="window1-input">
+									<input type="number" placeholder="Baggage" required min="1" max="50" data-pass="1" id="form-baggage" class="pass-off">
+								</div>
+								<div class="window1-input">
+									<a href="javascript: void(0)" data-adress-from="empty" data-adress-to="empty" data-passenger="empty" data-baggage="empty" data-timeTo="empty" data-carClass="empty" data-time="empty" data-route-to="empty" class="window1-input-order" id="window1-input-order">Order</a>
+								</div>
+							</div>
+							<!-- end form -->
+
+							<!-- window1 add Trip -->
+							<div class="window1-back-trip" id="window1-back-trip">
+								<h4>Take me back</h4>
+								<div class="window1-form-box-4 window1-form-box window1-form-box-right">
+									<div class="window1-input">
+										<input type="text" placeholder="Date / Time" required readonly id="calendar-input-1" class="window1-calendar-input" name="filter-date">
+									</div>
+								</div>
+								<div class="window1-form-box-1 window1-form-box window1-form-box-right">
+									<div class="window1-input">
+										<input type="text" id="route-to" placeholder="Details" required readonly>
+									</div>
+								</div>
+								<div class="window1-back-trip-price">
+									Trip Price: <span id="window1-hidden-data-val">0</span> €<br>Maximum expectation: <span>50 min</span>
+								</div>
+							</div>
+							<!-- end window1 add Trip -->
+						</form>
+						<div class="window1-data">
+							<!-- data item -->
+							<div class="window1-data-price">
+								<div class="window1-data-title">
+									Trip Price
+								</div>
+								<div class="window1-data-description">
+									<span id="window1-data-val" data-current-price="0">0</span> €
+								</div>
+							</div>
+							
+							<div class="window1-data-expect">
+								<div class="window1-data-title">
+									Maximum expectation
+								</div>
+								<div class="window1-data-description">
+									50 min
+								</div>
+							</div>
+
+							<div class="window1-data-payment">
+								<div class="window1-data-title">
+									You <span>can pay using</span>
+								</div>
+								<ul>
+									<li><img src="img/pay1.png" alt="Payment"></li>
+									<li><img src="img/pay2.png" alt="Payment"></li>
+									<li><img src="img/pay3.png" alt="Payment"></li>
+									<li><img src="img/pay4.png" alt="Payment"></li>
+								</ul>
+							</div>
+
+							<!-- end data -->
+						</div>
+					</div>
+					<!-- window1 image -->
+					<div class="window1-car-list">
+						<img src="img/car.png" alt="Car" class="window1-car-list-image">
+						<div class="window1-circle">
+							<a href="#choose-car" id="car-info" class="window1-open-list">
+								<img src="img/list.svg" alt="Icon">
+							</a>
+						</div>
+					</div>
+					<!-- window1 end image -->
+				</div>
+			</section>
+			<!-- end window1 -->
+
+			<div class="address-to" id="address-to">
+				<div class="address-to-bg" id="address-to-bg"></div>
+				<div class="address-to-inner">
+					<button id="close-address-to" class="close-address-to">
+						<span></span>
+					</button>
+					<p>
+						Enter the exact address from where you pick up and where to deliver. <span>For example: Paris, Rue du Pont Neuf 78</span>
+					</p>
+					<input type="text" id="address-to-from" placeholder="
+Take me away" required name="from" autocomplete="off">
+					<input type="text" id="address-to-to" placeholder="
+Bring me to" required name="to" autocomplete="off">
+					<button id="address-to-button" class="address-to-button">Continue</button>
+				</div>
+			</div>
+
+			<div class="address-from" id="address-from">
+				<div class="address-form-bg" id="address-form-bg"></div>
+				<div class="address-from-inner">
+					<button id="close-address-from" class="close-address-from">
+						<span></span>
+					</button>
+					<p>
+						Enter the exact address from where you pick up and where to deliver. <span>For example: Paris, Rue du Pont Neuf 78</span>
+					</p>
+					<input type="text" id="address-from-from" placeholder="
+Take me away" required name="from" autocomplete="off">
+					<input type="text" id="address-from-to" placeholder="
+Bring me to" required name="to" autocomplete="off">
+					<button id="address-from-button" class="address-from-button">Continue</button>
+				</div>
+			</div>
+
+			<div class="car-message" id="car-message">
+				You order <b><span id="window1-data-cars">1</span> cars.</b> Car max sits: <b><span id="car-max-sit">7</span>.</b> Passenger: <b><span id="car-max-sit-person">1</span> people.</b>
+			</div>
+
+			<!-- window2 -->
+			<section class="window2">
+				<div class="wrapper">
+					<div class="window2-info">
+						<p>
+							The country is <b>only France</b> and meeting only in Paris and the Ile de France in other places only by a single request in vibe, telephone or telephone.
+						</p>
+					</div>
+					<div class="window2-call">
+						<ul>
+							<li><a href="#"><img src="img/call1.svg" alt="Icons">Call</a></li>
+							<li><a href="#"><img src="img/call2.svg" alt="Icons">Whatsapp</a></li>
+							<li><a href="#"><img src="img/call3.svg" alt="Icons">Viber</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- end window2 -->
+
+			<!-- window3 -->
+			<section class="window3" id="section3">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-12">
+							<div class="common-title">
+								<div class="common-subtitle">
+									Our <b>benefits</b>
+								</div>
+								<h2>
+									Why you must to <br>choose us?
+								</h2>
+							</div>
+						</div>
+						<div class="window3-item col-lg-4 col-xs-12 col-sm-6 col-md-4">
+							<div class="window3-img"><img src="img/i1.svg" alt="Icon"></div>
+							<h3>Safe trip</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</p>
+						</div>
+						<div class="window3-item col-lg-4 col-xs-12 col-sm-6 col-md-4">
+							<div class="window3-img"><img src="img/i2.svg" alt="Icon"></div>
+							<h3>High quality</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+							</p>
+						</div>
+						<div class="window3-item col-lg-4 col-xs-12 col-sm-6 col-md-4">
+							<div class="window3-img"><img src="img/i3.svg" alt="Icon"></div>
+							<h3>Availability of docs</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</p>
+						</div>
+						<div class="window3-item col-lg-4 col-xs-12 col-sm-6 col-md-4">
+							<div class="window3-img"><img src="img/i4.svg" alt="Icon"></div>
+							<h3>Knowledge of the city</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</p>
+						</div>
+						<div class="window3-item col-lg-4 col-xs-12 col-sm-6 col-md-4">
+							<div class="window3-img"><img src="img/i5.svg" alt="Icon"></div>
+							<h3>Skilled drivers</h3>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+							</p>
+						</div>
+						<div class="col-xs-12 col-lg-4 col-sm-6 col-md-4 window3-item">
+							<a href="javascript: void(0)" class="window3-item-link" id="window3-item-link">
+								<div class="window3-img"></div>
+								<h3>Call Us</h3>
+								<p>
+									Have a question?
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end window3 -->
+
+		</div>
+		<!-- end gradient wrapper -->
+
+		<!-- modal calendar -->
+		
+		<!-- end modal calendar -->
+
+		<!-- modal-call -->
+		<div class="modal-call" id="modal-call">
+			<div class="modal-call-bg" id="modal-call-bg"></div>
+			<div class="modal-call-inner" id="modal-call-inner">
+				<button class="close-modal-call" id="close-modal-call">
+					<span></span>
+				</button>
+				<h3>
+					Request a call back
+				</h3>
+				<form action="#">
+					<input type="hidden" name="Client need:" id="callback-title">
+					<div class="modal-call-input">
+						<input type="text" id="modal-call-input-name" name="Enter your Name" placeholder="Enter your Name" required>
+					</div>
+					<div class="modal-call-input">
+						<label for="modal-call-input-phone"></label>
+						<input type="text" id="modal-call-inputphone" name="Enter your Phone" placeholder="Enter your Phone" required>
+					</div>
+					<div class="modal-call-submit-wrapper">
+						<button type="submit" class="modal-call-submit" id="modal-call-submit">
+							Request
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end modal-call -->
+
+		<!-- modal-call -->
+		<div class="modal-driver" id="modal-driver">
+			<div class="modal-driver-bg" id="modal-driver-bg"></div>
+			<div class="modal-driver-inner" id="modal-driver-inner">
+				<button class="close-modal-driver" id="close-modal-driver">
+					<span></span>
+				</button>
+				<h3>
+					Request a call back
+				</h3>
+				<form action="#">
+					<div class="modal-driver-input">
+						<input type="text" id="modal-driver-input-phone" autocomplete="off" name="Your Phone" placeholder="Enter your Phone" required>
+					</div>
+					<div class="modal-driver-input">
+						<input type="text" id="modal-driver-input-email" autocomplete="off" name="Your Email" placeholder="Enter your Email" required>
+					</div>
+					<div class="modal-driver-input">
+						<input type="text" id="modal-driver-input-name" autocomplete="off" name="Name and last Name" placeholder="Name and last Name" required>
+					</div>
+					<div class="modal-driver-input">
+						<input type="text" id="modal-driver-carmodel" autocomplete="off" name="Car model" placeholder="Enter your Car model" required>
+					</div>
+					<div class="modal-driver-submit-wrapper">
+						<button type="submit" class="modal-driver-submit" id="modal-driver-submit">
+							Request
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end modal-call -->
+
+		<!-- modal-form -->
+		<div class="modal-form" id="modal-form">
+			<div class="modal-form-bg1" id="modal-form-bg1"></div>
+			<div class="modal-form-inner">
+				<button class="modal-form-close" id="modal-form-close">
+					<span></span>
+				</button>
+				<form action="#">
+					<input type="hidden" id="modal-hidden-1" name="Address to take (Details)">
+					<input type="hidden" id="modal-hidden-2" name="Address to take client">
+					<input type="hidden" id="modal-hidden-3" name="Address to take (Date)">
+					<input type="hidden" id="modal-hidden-4" name="Car Class">
+					<input type="hidden" id="modal-hidden-5" name="Passenger">
+					<input type="hidden" id="modal-hidden-6" name="Baggage">
+					<input type="hidden" id="modal-hidden-7" name="Common Price">
+
+					<div class="modal-inner-content">
+						<div class="modal-inner-content-bg" id="modal-inner-content-bg"></div>
+						<div class="modal-inner-box" id="modal-inner-box">
+							<h3>
+								Enter your personal data
+							</h3>
+							<div class="modal-inner-form">
+								<div class="modal-inner-form-user">
+									<input type="text" placeholder="Your Name:" id="modal-form-name" required>
+									<input type="text" placeholder="Your Phone:" id="modal-form-phone" required>
+								</div>
+								<div class="modal-inner-form-user">
+									<input type="text" placeholder="Flight number:" id="modal-form-reis" required>
+									<input type="text" placeholder="Terminal number:" id="modal-form-term" required>
+								</div>
+								<div class="modal-inner-form-user modal-inner-form-user-textarea">
+									<textarea name="Comment" placeholder="Comment" rows="3 " id="modal-form-comment"></textarea>
+									<div class="modal-inner-form-children">
+										<p>
+											You may need a baby seat? <b>(Please enter number)</b>
+										</p>
+										<input type="text" name="Baby seat" placeholder="Number:" id="modal-form-number" required>
+									</div>
+								</div>
+							</div>
+							<p>
+								By address waiting a maximum <b>of 15 minutes,</b> at the airport they meet at the <b>5-minute (kiss & ride)</b> entrances, wait there (they do not meet at the parking lot). If you do not appear at the indicated time, the car leaves, <b>money is not returned!</b>
+							</p>
+						</div>
+					</div>
+					<button class="send-modal-form" id="send-modal-form">
+						Take an order
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- end modal-form -->
+
+		<!-- modal menu -->
+		<div class="modal-menu" id="modal-menu">
+			<div class="modal-menu-bg" id="modal-menu-bg"></div>
+			<button class="close-modal-menu" id="close-modal-menu">
+				<span></span>
+			</button>
+			<div class="modal-menu-inner">
+				<div class="modal-menu-call">
+					<ul>
+						<li>
+							<a href="tel:(044) 465 4456">
+								(044) 465 4456
+							</a>
+						</li>
+						<li>
+							<a href="tel:(044) 465 4456">
+								(044) 465 4456
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="modal-menu-list">
+					<ul>
+						<li><a href="#section3">Benefits</a></li>
+							<li><a href="#section5">Excursions</a></li>
+							<li><a href="#section7">For Drivers</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end modal menu -->
+
+		<!-- modal select -->
+		<div class="modal-select" id="modal-select">
+			<div class="modal-select-bg2" id="modal-select-bg2"></div>
+			<div class="modal-select-inner">
+				<button class="close-modal-select" id="close-modal-select"><span></span></button>
+				<div class="modal-select-list" id="modal-select-list">
+					<ul>
+						<li data-class="1" data-passanger-count="4" data-car-length="1">
+							Бизнес Mercedes Viano - 4 мест
+						</li>
+						<li data-class="2" data-passanger-count="4" data-car-length="2">
+							VIP Mercedes S Class - 4 мест
+						</li>
+						<li data-class="3" data-passanger-count="7" data-car-length="3">
+							VIP Mercedes V Class - 7 мест
+						</li>
+						<li data-class="4" data-passanger-count="7" data-car-length="4">
+							Бизнес Mercedes Viano - 7 мест
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end modal select -->
+
+		<!-- window4 -->
+		<section class="window4" id="choose-car">
+			<div class="wrapper">
+				<div class="common-title">
+					<div class="common-subtitle">
+						Whants to <b>see the city?</b>
+					</div>
+					<h2>
+						We offer our <br>best price
+					</h2>
+				</div>
+				<!-- wrapper -->
+				<div class="window4-more-info">
+					<div class="window4-info-img-box">
+						<h3 id="window4-title">Бизнес <span>Mercedes Viano 3</span></h3>
+						<img src="img/c1.png" alt="Image" class="window4-image" id="window4-image">
+
+					</div>
+					<a href="#window1-title-anchor" class="window4-order" id="window4-order">
+						Make an order
+					</a>
+					<div class="window4-more-info-content" id="window4-more-info-content">
+						<ul>
+							<li>Париж - Париж - <b>80 €</b></li>
+							<li>CDG - ПАРИЖ - <b>130 €</b></li>
+							<li>CDG - Диснейленд - <b>110 €</b></li>
+							<li>ПАРИЖ - ДИСНЕЙЛЕНД - <b>120 €</b></li>
+							<li>CDG - Версаль - <b>140 €</b></li>
+
+							<li>ORLY - Париж - <b>120 €</b></li>
+							<li>ПАРИЖ - Orly - <b>120 €</b></li>
+							<li>Париж - Шантийи - <b>по запросу</b></li>
+							<li>Париж - Довиль - <b>по запросу</b></li>
+							<li>Париж - Реймс - <b>по запросу</b></li>
+
+							<li>Париж - Брюссель - <b>по запросу</b></li>
+							<li>Париж - Ле Бурже - <b>по запросу</b></li>
+							<li>Париж - Villepinte - <b>190 €</b></li>
+							<li>Париж - Страсбург - <b>по запросу</b></li>
+							<li>Бове - Париж - <b>150 €</b></li>
+
+						</ul>
+					</div>
+
+				</div>
+				<!-- end wrapper -->
+			</div>
+
+			<!-- item -->
+			<div class="window4-item-box" id="window4-item-box">
+				
+				<div class="window4-item">
+					<div class="window4-item-img">
+						<div class="window4-item-img-container">
+							<img src="img/c2.png" alt="Image" id="Car1">
+						</div>
+					</div>
+					<div class="window4-item-content">
+						<h3>Бизнес <span>Mercedes Viano 1</span></h3>
+					</div>
+					<div class="window4-hidden">
+						<ul>
+							<li>Париж - Париж - <b>80 €</b></li>
+							<li>CDG - ПАРИЖ - <b>130 €</b></li>
+							<li>CDG - Диснейленд - <b>110 €</b></li>
+							<li>ПАРИЖ - ДИСНЕЙЛЕНД - <b>120 €</b></li>
+							<li>CDG - Версаль - <b>140 €</b></li>
+
+							<li>ORLY - Париж - <b>120 €</b></li>
+							<li>ПАРИЖ - Orly - <b>120 €</b></li>
+							<li>Париж - Шантийи - <b>по запросу</b></li>
+							<li>Париж - Довиль - <b>по запросу</b></li>
+							<li>Париж - Реймс - <b>по запросу</b></li>
+
+							<li>Париж - Брюссель - <b>по запросу</b></li>
+							<li>Париж - Ле Бурже - <b>по запросу</b></li>
+							<li>Париж - Villepinte - <b>190 €</b></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="window4-item">
+					<div class="window4-item-img">
+						<div class="window4-item-img-container">
+							<img src="img/c3.png" alt="Image">
+						</div>
+					</div>
+					<div class="window4-item-content">
+						<h3>Бизнес <span>Mercedes Viano 2</span></h3>
+					</div>
+					<div class="window4-hidden">
+						<ul>
+							<li>Париж - Париж - <b>80 €</b></li>
+							<li>CDG - ПАРИЖ - <b>130 €</b></li>
+							<li>CDG - Диснейленд - <b>110 €</b></li>
+							<li>ПАРИЖ - ДИСНЕЙЛЕНД - <b>120 €</b></li>
+							<li>CDG - Версаль - <b>140 €</b></li>
+
+							<li>ORLY - Париж - <b>120 €</b></li>
+							<li>ПАРИЖ - Orly - <b>120 €</b></li>
+							<li>Париж - Шантийи - <b>по запросу</b></li>
+							<li>Париж - Довиль - <b>по запросу</b></li>
+							<li>Париж - Реймс - <b>по запросу</b></li>
+
+							<li>Париж - Брюссель - <b>по запросу</b></li>
+							<li>Париж - Ле Бурже - <b>по запросу</b></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="window4-item">
+					<div class="window4-item-img">
+						<div class="window4-item-img-container">
+							<img src="img/c1.png" alt="Image">
+						</div>
+					</div>
+					<div class="window4-item-content">
+						<h3>Бизнес <span>Mercedes Viano 3</span></h3>
+					</div>
+				</div>
+
+				<div class="window4-item">
+					<div class="window4-item-img">
+						<div class="window4-item-img-container">
+							<img src="img/cars.png" alt="Image">
+						</div>
+					</div>
+					<div class="window4-item-content">
+						<h3>Бизнес <span>Mercedes Viano 4</span></h3>
+					</div>
+					<div class="window4-hidden">
+						<ul>
+							<li>Париж - Париж - <b>80 €</b></li>
+							<li>CDG - ПАРИЖ - <b>130 €</b></li>
+							<li>CDG - Диснейленд - <b>110 €</b></li>
+							<li>ПАРИЖ - ДИСНЕЙЛЕНД - <b>120 €</b></li>
+							<li>CDG - Версаль - <b>140 €</b></li>
+
+							<li>ORLY - Париж - <b>120 €</b></li>
+							<li>ПАРИЖ - Orly - <b>120 €</b></li>
+							<li>Париж - Шантийи - <b>по запросу</b></li>
+							<li>Париж - Довиль - <b>по запросу</b></li>
+							<li>Париж - Реймс - <b>по запросу</b></li>
+
+							<li>Париж - Брюссель - <b>по запросу</b></li>
+							<li>Париж - Ле Бурже - <b>по запросу</b></li>
+							<li>Париж - Villepinte - <b>190 €</b></li>
+							<li>Париж - Брюссель - <b>по запросу</b></li>
+							<li>Париж - Ле Бурже - <b>по запросу</b></li>
+							<li>Париж - Villepinte - <b>190 €</b></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			
+			<!-- end item -->
+		</section>
+		<!-- end window4 -->
+
+		<!-- window5 -->
+		<section class="window5" id="section5">
+			<img src="img/liner.png" alt="image" class="window5-bg-image">
+			<div class="wrapper">
+				<div class="common-title">
+					<div class="common-subtitle">
+						Wants to see <b>the city?</b>
+					</div>
+					<h2>
+						We offer our <br><b>best excursion</b>
+					</h2>
+				</div>
+				<div class="container">
+					<div class="row">
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 1</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris1.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 2</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris3.jpeg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 3</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12"><a href="javascript: void(0)" class="window5-more-news" id="window5-more-news">More excursion</a></div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end window5 -->
+
+		<!-- window6 -->
+		<section class="window6" id="window6">
+			<div class="wrapper" id="window6-scroll" data-simplebar data-simplebar-auto-hide="false">
+
+				<div class="container">
+					<div class="row">
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 1</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris1.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 2</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris3.jpeg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 3</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 1</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris1.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 2</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris3.jpeg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 3</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 1</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris1.jpg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 2</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-4 col-lg-4 window5-item">
+							<!-- news item -->
+							<a href="javascript: void(0)" class="window5-news-box">
+								<img src="img/paris3.jpeg" alt="Image">
+								<div class="window5-news-wrap">
+									<h2>Excursion near the Eifel Tower 3</h2>
+									<div class="window5-date">
+										Date: <b>27.01.2019</b> <span>Price: <b>250€</b></span>
+									</div>
+									<div class="window5-order">
+										Make an order
+									</div>
+								</div>
+							</a>
+							<!-- end news item -->
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<button class="close-modal-news" id="close-modal-news"><span></span></button>
+			<div class="window6-bg" id="window6-bg"></div>
+		</section>
+		<!-- end window6 -->
+
+		<!-- window7 -->
+		<section class="window7" id="section7">
+			<div class="wrapper">
+				<div class="window7-item window7-item-align">
+					<div class="window7-item-circle">
+						<div class="window7-item-circle-1"></div>
+						<div class="window7-item-circle-2"></div>
+					</div>
+					<div class="window7-image">
+						<img src="img/cars.png" alt="Image">
+					</div>
+				</div>
+				<div class="window7-item">
+					<h2>
+						You know how to drive and you are looking for a <span>prestidious job?</span>
+					</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consequuntur enim doloribus ipsam, iusto numquam neque tempore accusamus architecto, mollitia amet dicta omnis ab sint.
+					</p>
+					<a href="javascript: void(0)" id="window7-link">Have an interview</a>
+				</div>
+			</div>
+		</section>
+		<!-- end window7 -->
+		
+		<!-- footer -->
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer-title">
+					<a href="/">
+						<img src="img/logo.png" alt="Logotype">
+					</a>
+					<div class="footer-language">
+						You can change Language <span>EN</span>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="footer-items col-12  col-sm-6 col-md-4 col-lg-4">
+							<h3>Some rules</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora recusandae consequuntur tenetur, <a href="#">voluptate fugit! Quas!</a>
+							</p>
+						</div>
+						<div class="footer-items col-6 col-sm-6 col-md-4 col-lg-4">
+							<h3>Payments</h3>
+							<div class="footer-payment">
+								<div class="window1-data-title">
+									You <span>can pay using</span>
+								</div>
+								<ul>
+									<li><img src="img/pay1.png" alt="Payment"></li>
+									<li><img src="img/pay2.png" alt="Payment"></li>
+									<li><img src="img/pay3.png" alt="Payment"></li>
+									<li><img src="img/pay4.png" alt="Payment"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-items col-6 col-sm-6 col-md-4 col-lg-4">
+							<h3>Contact Us</h3>
+							<div class="footer-contact">
+								<a href="tel:(044) 465 4456" class="footer-call">(044) 465 4456</a>
+								<a href="tel:(044) 465 4456" class="footer-call">(044) 465 4456</a>
+								<ul>
+									<li><a href="#"><img src="img/call1.svg" alt="Icons">Call</a></li>
+									<li><a href="#"><img src="img/call2.svg" alt="Icons">Whatsapp</a></li>
+									<li><a href="#"><img src="img/call3.svg" alt="Icons">Viber</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+
+	</div>
+	<!-- end common opacity -->
+
+	<!-- car class count -->
+	<div class="car-class-count-hidden">
+		<!-- car class -->
+		<ul id="car-class-val-1">
+			<li data-price="80">Париж - Париж - 80 €</li>
+			<li data-price="130">CDG - ПАРИЖ - 130 €</li>
+			<li data-price="110">CDG - Диснейленд - 110 €</li>
+			<li data-price="120">ПАРИЖ - ДИСНЕЙЛЕНД - 120 €</li>
+			<li data-price="140">CDG - Версаль - 140 €</li>
+			<li data-price="120">ORLY - Париж - 120 €</li>
+			<li data-price="120">ПАРИЖ - Orly - 120 €</li>
+			<li data-price="0">Париж - Шантийи - по запросу</li>
+			<li data-price="0">Париж - Довиль - по запросу</li>
+			<li data-price="0">Париж - Реймс - по запросу</li>
+			<li data-price="0">Париж - Брюссель - по запросу</li>
+			<li data-price="0">Париж - Ле Бурже - по запросу</li>
+			<li data-price="190">Париж - Villepinte - 190 €</li>
+			<li data-price="0">Париж - Страсбург - по запросу</li>
+			<li data-price="150">Бове - Париж - 150 €</li>
+		</ul>
+		<!-- car class -->
+
+		<!-- car class -->
+		<ul id="car-class-val-2">
+			<li data-price="80">Париж - Париж - 80 €</li>
+			<li data-price="130">CDG - ПАРИЖ - 130 €</li>
+			<li data-price="110">CDG - Диснейленд - 110 €</li>
+			<li data-price="120">ПАРИЖ - ДИСНЕЙЛЕНД - 120 €</li>
+			<li data-price="140">CDG - Версаль - 140 €</li>
+			<li data-price="120">ORLY - Париж - 120 €</li>
+			<li data-price="120">ПАРИЖ - Orly - 120 €</li>
+			<li data-price="0">Париж - Шантийи - по запросу</li>
+			<li data-price="0">Париж - Довиль - по запросу</li>
+			<li data-price="0">Париж - Реймс - по запросу</li>
+			<li data-price="0">Париж - Брюссель - по запросу</li>
+			<li data-price="0">Париж - Ле Бурже - по запросу</li>
+			<li data-price="190">Париж - Villepinte - 190 €</li>
+			<li data-price="0">Париж - Страсбург - по запросу</li>
+	        <li data-price="150">Бове - Париж - 150 €</li>
+		</ul>
+		<!-- car class -->
+
+		<!-- car class -->
+		<ul id="car-class-val-3">
+			<li data-price="160">Париж - Париж - 160 €</li>
+			<li data-price="240">CDG - Париж - 240 € АКЦИЯ</li>
+			<li data-price="270">CDG - Диснейленд - 270 €</li>
+			<li data-price="240">Париж - Диснейленд - 240 €</li>
+			<li data-price="260">CDG - Версаль - 260 €</li>
+			<li data-price="240">ORLY - Париж - 240 €</li>
+			<li data-price="240">Париж - Orly - 240 €</li>
+			<li data-price="360">Париж - Шантийи - 360 €</li>
+			<li data-price="1100">Париж - Довиль - 1100 €</li>
+			<li data-price="900">Париж - Реймс - 900 €</li>
+			<li data-price="1050">Париж - Брюссель - 1050 €</li>
+			<li data-price="250">Париж - Ле Бурже - 250 €</li>
+			<li data-price="250">Париж - Villepinte - 250 €</li>
+			<li data-price="1250">Париж - Страсбург - 1250 €</li>
+		</ul>
+		<!-- car class -->
+
+		<!-- car class -->
+		<ul id="car-class-val-4">
+			<li data-price="110">Париж - Париж - 110 €</li>
+			<li data-price="160">CDG - ПАРИЖ - 160 €</li>
+			<li data-price="190">CDG - Диснейленд - 190 €</li>
+			<li data-price="150">Париж - ДИСНЕЙЛЕНД - 150 €</li>
+			<li data-price="180">CDG - ВЕРСАЛЬ - 180 €</li>
+			<li data-price="150">ORLY - Париж - 150 €</li>
+			<li data-price="150">Париж - Orly - 150 €</li>
+			<li data-price="0">Париж - Шантийи - по запросу</li>
+			<li data-price="0">Париж - Довиль -по запросу</li>
+			<li data-price="0">Париж - Реймс - по запросу</li>
+			<li data-price="0">Париж - Брюссель - по запросу</li>
+			<li data-price="0">Париж - Ле Бурже - по запросу</li>
+			<li data-price="220">Париж - Villepinte - 220 €</li>
+			<li data-price="0">Париж - Страсбург - по запросу</li>
+		</ul>
+		<!-- car class -->
+	</div>
+	<!-- end car class count -->
+
+	
+	
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@3.0.0-beta.4/dist/simplebar.min.js"></script>
+	<script src="js/common.js"></script>
+
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+
+	<script src="libs/dp/jquery.datetimepicker.full.min.js"></script>
+	<script src="js/js-addition.js"></script>
+	<script src="js/calc.js"></script>
+
+</body>
+</html>

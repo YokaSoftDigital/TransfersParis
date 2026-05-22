@@ -1,0 +1,50 @@
+/*!
+Theme Name: transferparis
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: transferparis
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+transferparis is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+.wpml-ls-legacy-dropdown .wpml-ls-sub-menu{
+	width: 62px;
+	border-top: none;
+}
+
+.wpml-ls-legacy-dropdown{
+	width: auto;
+}
+
+.wpml-ls-legacy-dropdown a{
+	border: 1px solid #292929;
+    background-color: rgba(255,255,255,.2);
+	transition: all .3s ease;
+}
+
+.wpml-ls-legacy-dropdown a.js-wpml-ls-item-toggle{
+	border: 1px solid #292929;
+    background-color: transparent;
+	transition: all .3s ease;
+}
+
+.wpml-ls-legacy-dropdown a.js-wpml-ls-item-toggle:hover,.wpml-ls-legacy-dropdown a.js-wpml-ls-item-toggle:active,.wpml-ls-legacy-dropdown a.js-wpml-ls-item-toggle:focus,.wpml-ls-legacy-dropdown a.js-wpml-ls-item-toggle:visited{
+	border: 1px solid #292929 !important;
+    background-color: transparent !important;
+	color: #454545 !important;
+}
+
+
